@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="500.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.muebleriamontana.controller.alertas.ErrorController">
+   <top>
+      <HBox alignment="CENTER" prefHeight="35.0" style="-fx-background-color: orange;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="200.0" HBox.hgrow="ALWAYS" />
+            <Label text="Error al">
+               <HBox.margin>
+                  <Insets right="2.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="lblAccionTitulo" text="Accion" />
+            <Pane prefHeight="0.0" HBox.hgrow="ALWAYS" />
+            <ImageView fx:id="btnCerrar" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#click_btnCerrar" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/sistema/cerrar.png" />
+               </image>
+            </ImageView>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+      </HBox>
+   </top>
+   <center>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
+                     <children>
+                        <ImageView fx:id="imgAlerta" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../img/sistema/error01.png" />
+                           </image>
+                        </ImageView>
+                        <FlowPane>
+                           <children>
+                              <Label text="Error al " wrapText="true">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblAccionMensaje" text="Accion" wrapText="true">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </FlowPane>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="20.0" VBox.vgrow="ALWAYS" />
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Button fx:id="btnAceptar" cancelButton="true" mnemonicParsing="false" onAction="#click_btnAceptar" text="Aceptar">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="25.0" right="25.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </BorderPane.margin>
+      </AnchorPane>
+   </center>
+</BorderPane>
